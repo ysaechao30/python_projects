@@ -13,3 +13,14 @@ obj = Protected()
 obj.getPrivate()
 obj.setPrivate('Secret')
 obj.getPrivate()
+
+
+
+class Protected:
+    def __init__(self):
+        self._protectedVar = 0
+
+
+obj = Protected()
+obj._protectedVar = 'Inbetween'
+print(obj._protectedVar)
